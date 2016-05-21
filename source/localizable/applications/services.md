@@ -1,4 +1,5 @@
-An [`Ember.Service`][1] is a long-lived Ember object that can be made available in different parts of your application.
+An [`Ember.Service`][1] is a long-lived Ember object that can be made available in different parts of your application. 
+Once loaded, a service will persist until the application exits, such as when performing a page reload. 
 
 [1]: http://emberjs.com/api/classes/Ember.Service.html
 
@@ -87,8 +88,6 @@ This injects the shopping cart service into the component and makes it available
 
 Injected properties are lazy loaded; meaning the service will not be instantiated until the property is explicitly called.
 Therefore you need to access services in your component using the `get` function otherwise you might get an undefined.
-
-Once loaded, a service will persist until the application exits.
 
 Below we add a remove action to the `cart-contents` component.
 Notice that below we access the `cart` service with a call to`this.get`.
